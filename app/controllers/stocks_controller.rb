@@ -11,7 +11,6 @@ class StocksController < ApplicationController
             price: params[:price],
             total_stock: params[:total_stock],
             ticker_tag: params[:ticker_tag]
-
         )
         Stock.to_json
     end 
