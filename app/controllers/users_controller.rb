@@ -4,7 +4,6 @@ class UsersController < ApplicationController
         User.all.to_json
     end 
 
-
     post '/users' do 
         user = User.create(
             name: params[:name],
@@ -30,5 +29,6 @@ class UsersController < ApplicationController
         user.destroy
     end
 
+  
 end
 

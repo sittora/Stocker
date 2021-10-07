@@ -9,7 +9,7 @@ class StocksController < ApplicationController
         stock = Stock.create(
             name: params[:name],
             price: params[:price],
-            total_stock: params[:total_stock]
+            total_stock: params[:total_stock],
             ticker_tag: params[:ticker_tag]
 
         )
