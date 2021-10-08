@@ -27,8 +27,8 @@ class StocksController < ApplicationController
     end
 
     delete '/stocks/:id' do
-        stock = Stock.find(params[:id])
-        Stock.destroy
+        # stock = Stock.find(params[:id])
+        Stock.destroy(params[:id])
     end
 
   
