@@ -12,18 +12,18 @@ class StocksController < ApplicationController
             total_stock: params[:total_stock],
             ticker_tag: params[:ticker_tag]
         )
-        Stock.to_json
+        stock.to_json
     end 
 
     get '/stocks/:id' do
         stock = Stock.find(params[:id])
-        Stock.to_json
+        stock.to_json
     end
 
     patch '/stocks/:id' do
         stock = Stock.find(params[:id])
-        Stock.update(params)
-        Stock.to_json
+        stock.update(params)
+        stock.to_json
     end
 
     delete '/stocks/:id' do
