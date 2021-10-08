@@ -10,7 +10,9 @@ class SubscriptionsController < ApplicationController
         subscription = Subscription.create(
             number_of_stocks: params[:number_of_stocks],
             stock_price: params[:stock_price],
-            date: params[:date]
+            date: params[:date],
+            user_id: params[:user_id],
+            stock_id: params[:stock_id]
         )
         subscription.to_json
     end 
