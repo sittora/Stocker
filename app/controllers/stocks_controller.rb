@@ -4,6 +4,10 @@ class StocksController < ApplicationController
         Stock.all.to_json
     end 
 
+    get '/stocks/:id' do
+        stock = Stock.find(params[:id])
+        stock.to_json
+    end
 
     post '/stocks' do 
         stock = Stock.create(
@@ -15,10 +19,7 @@ class StocksController < ApplicationController
         stock.to_json
     end 
 
-    get '/stocks/:id' do
-        stock = Stock.find(params[:id])
-        stock.to_json
-    end
+    
 
     patch '/stocks/:id' do
         stock = Stock.find(params[:id])
@@ -27,8 +28,8 @@ class StocksController < ApplicationController
     end
 
     delete '/stocks/:id' do
-        # stock = Stock.find(params[:id])
-        Stock.destroy(params[:id])
+        stock = Stock.find(params[:id])
+        stock.destroy
     end
 
   

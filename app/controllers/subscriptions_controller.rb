@@ -2,7 +2,7 @@ class SubscriptionsController < ApplicationController
 
 
     get '/subscriptions' do 
-        subscription.all.to_json
+        Subscription.all.to_json
     end 
 
 
